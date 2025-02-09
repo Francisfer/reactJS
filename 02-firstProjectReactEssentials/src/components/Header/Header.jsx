@@ -1,5 +1,8 @@
 // Import the image instead of hardcoding the src attribute. It is done so that the path does not get lost in the build process and also because we can optimize images.
-import headerImg from "../assets/react-core-concepts.png";
+import headerImg from "../../assets/react-core-concepts.png";
+
+// Importing the styles, they are not scoped to the component
+import "./Header.css";
 
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
