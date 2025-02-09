@@ -1,0 +1,17 @@
+{
+  "name": "javascript-refresher-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "@babel/core": "^7.26.8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
