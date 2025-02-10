@@ -4,6 +4,10 @@ import CoreConcept from "./components/CoreConcept.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
+  /* We have the function here, pass it as a value on our tab components through a prop, and the event is handled in the component itself */
+  function handleClick() {
+    console.log("click handled");
+  }
   return (
     <div>
       <Header /> {/* This is how we "call" our components */}
@@ -24,7 +28,11 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
+            {/* passing a pointer, a function as a value */}
+            <TabButton onClick={handleClick}>Components</TabButton>
+            <TabButton onClick={handleClick}>JSX</TabButton>
+            <TabButton onClick={handleClick}>Props</TabButton>
+            <TabButton onClick={handleClick}>State</TabButton>
           </menu>
         </section>
       </main>

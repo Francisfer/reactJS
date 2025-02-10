@@ -25,4 +25,4 @@ that configured the different parts of the card.
 
 --> For the button, since we just need the text, it is easier to just pass the text, using the props.children.
 
--> Like this it is more convenient and recognizable because it looks like writing a button in html. We could, of course, add a property like label and pass it as a prop.
+-> Like this it is more convenient and recognizable because it looks like writing a button in html. We could, of course, add a property like label and pass it as a prop. (personal preference).
