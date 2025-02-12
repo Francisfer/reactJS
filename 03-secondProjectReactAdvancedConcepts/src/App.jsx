@@ -2,6 +2,7 @@ import Player from "./components/Player.jsx";
 import GameBoard from "./components/GameBoard.jsx";
 import React, { useState } from "react";
 // Lifting state up - we useState here to manage the active player because we need that information on both components, on GameBoard for the symbol to be displayed and on Player to add the classes for styling.
+import Log from "./components/Log.jsx";
 function App() {
   // Lifting state.
 
@@ -38,6 +39,7 @@ function App() {
           activePlayerSymbol={activePlayer}
         />
       </div>
+      <Log />
     </main>
   );
 }
