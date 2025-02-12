@@ -15,7 +15,7 @@ const initialGameBoard = [
 
 // For that, we need to loop over each row, which has three values (null at start). This will give us the rows.
 
-export default function GameBoard() {
+export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
   // Initial state set to initialGameBoard
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
@@ -38,11 +38,13 @@ export default function GameBoard() {
       const updatedBoard = [
         ...prevGameBoard.map((innerArray) => [...innerArray]),
       ];
-      updatedBoard[rowIndex][colIndex] = "X";
+      updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
 
       // returning the updated previous state to the new state.
       return updatedBoard;
     });
+    // Here to call it on click
+    onSelectSquare();
   }
 
   return (

@@ -20,7 +20,7 @@ import { useState } from "react";
 
 // On change will trigger the callback at each keystroke and provides an event object that contains the value inserted by the user.
 
-export default function Player({ initialName, symbol }) {
+export default function Player({ initialName, symbol, isActive }) {
   const [isEditing, setIsEditing] = useState(false);
   const [playerName, setPlayerName] = useState(initialName);
 
@@ -52,7 +52,7 @@ export default function Player({ initialName, symbol }) {
   }
 
   return (
-    <li>
+    <li className={isActive ? "active" : undefined}>
       <span className="player">
         {playerElement}
         <span className="player-symbol">{symbol}</span>
